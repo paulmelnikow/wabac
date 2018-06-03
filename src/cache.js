@@ -1,5 +1,7 @@
 'use strict'
 
+const { isErrorReason } = require('./api-errors')
+
 class Cache {
   constructor({ storage, bucketName }) {
     Object.assign(this, { storage, bucketName })
@@ -11,6 +13,16 @@ class Cache {
       storageClass: 'regional',
       versioning: { enabled: true },
     })
+  }
+
+  async initializeIfNeeded(options) {
+    try {
+      await this.initialize(options)
+    } catch (e) {
+      if (!isErrorReason(e, 'conflict')) {
+        throw e
+      }
+    }
   }
 
   async get(key, { maxAgeSeconds }) {
