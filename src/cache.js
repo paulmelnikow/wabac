@@ -2,34 +2,38 @@
 
 class Cache {
   constructor({ storage, bucketName }) {
+    Object.assign(this, { storage, bucketName })
+  }
+
+  async initialize({ location }) {
+    await this.storage.createBucket(this.bucketName, {
+      location,
+      storageClass: 'regional',
+      versioning: { enabled: true },
+    })
+  }
+
+  async get(key, { maxAgeSeconds }) {
     throw Error('Not implemented')
   }
 
-  initialize() {
+  async getVersion(key, asOfDate) {
     throw Error('Not implemented')
   }
 
-  get(key, { maxAgeSeconds }) {
+  async delete(key) {
     throw Error('Not implemented')
   }
 
-  getVersion(key, asOfDate) {
+  async put(key) {
     throw Error('Not implemented')
   }
 
-  delete(key) {
+  async drop(key) {
     throw Error('Not implemented')
   }
 
-  put(key) {
-    throw Error('Not implemented')
-  }
-
-  drop(key) {
-    throw Error('Not implemented')
-  }
-
-  dropAll() {
+  async dropAll() {
     throw Error('Not implemented')
   }
 }
