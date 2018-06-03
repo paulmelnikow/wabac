@@ -1,7 +1,7 @@
 'use strict'
 
-const VersionedCache = require('./versioned-cache')
+const Cache = require('./cache')
 
 module.exports = {
-  VersionedCache,
+  Cache,
 }
