@@ -1,0 +1,78 @@
+env:
+  es6: true
+
+extends:
+  - eslint:recommended
+
+rules:
+  strict: ["error", "global"]
+  no-process-env: "error"
+
+  # var compositeThing = new CompositeThing();
+  # var params = { thisIsPreferred: true };
+  # var params = { this_is_okay: true };
+  camelcase: ["error", { "properties": "never" }]
+  new-cap: "error"
+
+  dot-notation: "error"
+
+  # Prevent erroneous newline after return.
+  no-unreachable: "error"
+  # In the rare cases where semis are needed in multiline statements, require them,
+  # and place them at the beginning of the line.
+  # foo()
+  # ;[1, 2, 3].forEach(a => { console.log(a) })
+  no-unexpected-multiline: "error"
+
+  # Creating a function in a loop is a big gotcha.
+  no-loop-func: "error"
+
+  # Crockford, seems sensible.
+  no-empty: "error"
+  wrap-iife: ["error", "any"]
+  no-with: "error"
+
+  # var x = 'this is a' +
+  #     'multi-line string';
+  # From Crockford.
+  no-multi-str: "error"
+
+  # Avoid type coercion.
+  eqeqeq: "error"
+
+  # Style.
+  dot-location: ["error", "property"]
+
+  # No more thing.should.be.ok without calling it
+  no-unused-expressions: "error"
+
+  # Node.js
+  handle-callback-err: "error"
+  no-new-require: "error"
+
+  no-useless-escape: "error"
+
+  no-var: "error"
+  prefer-const: "error"
+  require-yield: "error"
+  no-useless-constructor: "error"
+  no-useless-rename: "error"
+  no-const-assign: "error"
+
+  # Disable a couple of the recommended checks:
+
+  # Allow unused parameters. In callbacks, removing them seems to obscure
+  # what the functions are doing.
+  no-unused-vars: ["error", {"args": "none"}]
+
+
+  # Prefer arrow functions over function keyword.
+  # const foo = (arg1, arg2) => {
+  #     stuff(arg1);
+  # };
+  # const factorial = (value) => {
+  #   return value == 0 ? 1 : value * factorial(value - 1);
+  # };
+  # This rule doesn't enforce it everywhere, but it's a start.
+  # It needs an exception to work with Mocha though.
+  prefer-arrow-callback: "error"
