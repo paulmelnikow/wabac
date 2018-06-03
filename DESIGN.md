@@ -1,9 +1,13 @@
 Design notes
 ============
 
+Initialization
+
 - initialize
     - initialize from cli
 - reinit
+
+Fetch / update
 
 - fetch latest version
 - fetch latest version with max age
@@ -13,6 +17,8 @@ Design notes
 - store new version / update version
     - update last fetched date if key exists and content is the same
 - clean all from cache
+
+Data model notes
 
 - use object create time as access time
 - supplement with "refetched" metadata
