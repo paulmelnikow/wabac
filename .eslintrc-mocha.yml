@@ -5,9 +5,9 @@ plugins:
   - 'mocha'
 
 rules:
-  "mocha/handle-done-callback": "error"
-  "mocha/no-global-tests": "error"
-  "mocha/no-mocha-arrows": "error"
+  'mocha/handle-done-callback': 'error'
+  'mocha/no-global-tests': 'error'
+  'mocha/no-mocha-arrows': 'error'
 
   # Prefer arrow functions over function keyword.
   # const foo = (arg1, arg2) => {
@@ -18,4 +18,4 @@ rules:
   # };
   # This rule doesn't enforce it everywhere, but it's a start.
   # It needs an exception to work with Mocha though.
-  prefer-arrow-callback: "off"
+  prefer-arrow-callback: 'off'
