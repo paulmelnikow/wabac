@@ -1,18 +1,14 @@
-wabac
-=====
+# wabac
 
 A versioned cache backed by cloud storage.
 
-
-Install
--------
+## Install
 
 ```
 $ yarn add -D wabac
 ```
 
-Usage
------
+## Usage
 
 Follow the [Google Cloud Storage quickstart][quickstart]. In particular, you
 must [set up authentication with a service account][auth] and set the
@@ -24,9 +20,7 @@ must [set up authentication with a service account][auth] and set the
 [quickstart]: https://github.com/googleapis/nodejs-storage#quickstart
 [auth]: https://cloud.google.com/docs/authentication/getting-started
 
-
-Development
------------
+## Development
 
 Designate a name for your test bucket. **Be careful! The tests will destroy
 this bucket.**
@@ -40,7 +34,6 @@ TEST_PROJECT_ID=your-project-here
 TEST_BUCKET_NAME=careful-because-what-you-specify-will-get-wiped-out-by-the-tests
 ```
 
-License
--------
+## License
 
 This project is licensed under the MIT license.

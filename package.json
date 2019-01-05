@@ -13,9 +13,11 @@
     "node": ">=10"
   },
   "scripts": {
-    "lint": "eslint '**/*.js'",
     "test:js": "mocha --timeout 10000 \"src/**/*.spec.js\"",
-    "test": "run-p test:js lint"
+    "lint": "eslint \"**/*.js\"",
+    "prettier": "prettier --write \"**/*.@(js|md|yml|json)\"",
+    "prettier-check": "prettier-check \"**/*.@(js|md|yml|json)\"",
+    "test": "run-p --continue-on-error test:js lint prettier-check"
   },
   "keywords": [
     "web-cache",
@@ -32,11 +34,12 @@
     "chai-datetime": "^1.5.0",
     "dotenv": "^6.0.0",
     "eslint": "^4.8.0",
-    "eslint-plugin-mocha": "^4.11.0",
-    "eslint-plugin-prettier": "^2.3.1",
-    "mocha": "^4.0.1",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "mocha": "^5.2.0",
     "npm-run-all": "^4.1.1",
     "prettier": "^1.7.4",
+    "prettier-check": "^2.0.0",
     "randomstring": "^1.1.5",
     "request-debug": "^0.2.0",
     "sazerac": "^0.4.2"
