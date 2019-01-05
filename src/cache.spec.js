@@ -1,6 +1,6 @@
 'use strict'
 
-const Storage = require('@google-cloud/storage')
+const { Storage } = require('@google-cloud/storage')
 const chai = require('chai')
 const { expect } = require('chai')
 const randomstring = require('randomstring')
