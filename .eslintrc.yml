@@ -4,14 +4,11 @@ env:
 parserOptions:
   ecmaVersion: 9
 
-plugins:
-  - "prettier"
-
 extends:
- - ./.eslintrc-safety.yml
- - ./.eslintrc-mocha.yml
+  - 'prettier'
+  - ./.eslintrc-safety.yml
+  - ./.eslintrc-mocha.yml
 
 rules:
-  prettier/prettier: "error"
   # More conflicts with prettier.
-  no-extra-semi: "off"
+  no-extra-semi: 'off'
