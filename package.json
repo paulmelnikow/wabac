@@ -1,6 +1,6 @@
 {
   "name": "wabac",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A versioned cache backed by cloud storage",
   "license": "MIT",
   "repository": "paulmelnikow/wabac",
