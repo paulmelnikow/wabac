@@ -5,7 +5,7 @@ A versioned cache backed by cloud storage.
 ## Install
 
 ```
-$ yarn add -D wabac
+$ npm install --save wabac
 ```
 
 ## Usage
