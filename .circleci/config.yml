@@ -4,8 +4,6 @@ jobs:
     docker:
       - image: circleci/node:10
 
-    working_directory: ~/repo
-
     steps:
       - checkout
 
@@ -15,7 +13,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm ci
+      - run:
+          name: Install dependencies
+          command: npm ci
 
       - save_cache:
           paths:
@@ -23,7 +23,14 @@ jobs:
           key: v1-dependencies-{{ checksum "package-lock.json" }}
 
       - run:
+          name: Prepare credentials
+          command: |
+            echo $GOOGLE_APPLICATION_CREDENTIALS_JSON > /home/circleci/project/credentials.json
+
+      - run:
           name: Run tests
+          environment:
+            GOOGLE_APPLICATION_CREDENTIALS: /home/circleci/project/credentials.json
           command: npm run test:js
 
       - run:
