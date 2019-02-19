@@ -36,7 +36,7 @@
     "eslint": "^5.12.1",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-mocha": "^5.2.1",
-    "mocha": "^5.2.0",
+    "mocha": "^6.0.0",
     "npm-run-all": "^4.1.1",
     "prettier": "^1.16.3",
     "prettier-check": "^2.0.0",
