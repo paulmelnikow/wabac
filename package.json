@@ -16,8 +16,8 @@
     "test:js": "mocha --timeout 10000 \"src/**/*.spec.js\"",
     "lint": "eslint \"**/*.js\"",
     "prettier": "prettier --write \"**/*.@(js|md|yml|json)\"",
-    "prettier-check": "prettier-check \"**/*.@(js|md|yml|json)\"",
-    "test": "run-p --continue-on-error test:js lint prettier-check"
+    "prettier:check": "prettier --check \"**/*.@(js|md|yml|json)\"",
+    "test": "run-p --continue-on-error test:js lint prettier:check"
   },
   "keywords": [
     "web-cache",
@@ -39,7 +39,6 @@
     "mocha": "^6.0.0",
     "npm-run-all": "^4.1.1",
     "prettier": "^1.16.3",
-    "prettier-check": "^2.0.0",
     "randomstring": "^1.1.5",
     "request-debug": "^0.2.0",
     "sazerac": "^0.4.2"
