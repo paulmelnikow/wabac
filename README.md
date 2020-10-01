@@ -1,12 +1,12 @@
 # wabac
 
-[![version](https://img.shields.io/npm/v/wabac.svg?style=flat-square)][npm]
-[![license](https://img.shields.io/npm/l/wabac.svg?style=flat-square)][npm]
-[![build](https://img.shields.io/circleci/project/github/paulmelnikow/wabac.svg?style=flat-square)][build]
-[![code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)][prettier]
+[![version](https://img.shields.io/npm/v/wabac?style=flat-square)][npm]
+[![license](https://img.shields.io/npm/l/wabac?style=flat-square)][npm]
+[![build](https://img.shields.io/circleci/project/github/paulmelnikow/wabac/main?style=flat-square)][build]
+[![code style](https://img.shields.io/badge/code_style-prettier-ff69b4?style=flat-square)][prettier]
 
 [npm]: https://npmjs.com/wabac
-[build]: https://circleci.com/gh/paulmelnikow/wabac/tree/master
+[build]: https://circleci.com/gh/paulmelnikow/wabac/tree/main
 [prettier]: https://prettier.io/
 [lerna]: https://lernajs.io/
 
