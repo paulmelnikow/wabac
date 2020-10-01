@@ -9,6 +9,12 @@
     "url": "whois.paulmelnikow.com"
   },
   "main": "src/index.js",
+  "files": [
+    "DESIGN.md",
+    "src/*.js",
+    "!src/*.spec.js",
+    "!src/test-*.js"
+  ],
   "engines": {
     "node": ">=10"
   },
