@@ -24,9 +24,6 @@ Follow the [Google Cloud Storage quickstart][quickstart]. In particular, you
 must [set up authentication with a service account][auth] and set the
 `GOOGLE_APPLICATION_CREDENTIALS` access variable.
 
-```js
-```
-
 [quickstart]: https://github.com/googleapis/nodejs-storage#quickstart
 [auth]: https://cloud.google.com/docs/authentication/getting-started
 
