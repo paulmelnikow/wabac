@@ -1,6 +1,6 @@
 {
   "name": "wabac",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A versioned cache backed by cloud storage",
   "license": "MIT",
   "repository": "paulmelnikow/wabac",
@@ -9,6 +9,12 @@
     "url": "whois.paulmelnikow.com"
   },
   "main": "src/index.js",
+  "files": [
+    "DESIGN.md",
+    "src/*.js",
+    "!src/*.spec.js",
+    "!src/test-*.js"
+  ],
   "engines": {
     "node": ">=10"
   },
